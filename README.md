@@ -1,5 +1,4 @@
-# LibraryTest
-工具library
+用法如下：
 	allprojects {
 		repositories {
 			...
