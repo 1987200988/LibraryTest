@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    testCompile 'junit:junit:4.12'
+
+
+    compile 'com.squareup.okio:okio:1.14.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'//日志拦截器
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    //retrofit
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'//gson转换工厂
+    //rxjava rxandroid
+//    compile 'io.reactivex:rxjava:1.0.14'
+//    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.jaeger.statusbaruitl:library:1.3.1'//沉浸式
+//    compile 'com.github.chrisbanes.photoview:library:1.2.4'//支持图片点击放大
+    compile 'org.greenrobot:eventbus:3.0.0'//消息总线
+    compile 'com.github.bumptech.glide:glide:3.7.0'//图片加载框架
+//   compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@arr'//可以加速加载
+
+    //dagger2 api
+//    compile 'com.google.dagger:dagger:2.8'
+    //注解处理器
+//    apt 'com.google.dagger:dagger-compiler:2.8'
+    //添加android缺失的部分javax注解
+//    provided 'org.glassfish:javax.annotation:10.0-b28'
+    //classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'//在工程build.gradle添加apt命令
+    //同时别忘解除上面的apt的插件注释
+
+
+//    compile 'com.blankj:utilcode:1.3.4'//工具类
+    //compile 'org.litepal.android:core:1.4.1'//数据库
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+
+//    compile 'com.marshalchen.ultimaterecyclerview:library:0.7.0'
+//  自动布局
+    compile 'com.zhy:autolayout:1.4.5'
+
+    compile 'com.lzy.net:okgo:2.1.4'        //可以单独使用，不需要依赖下方的扩展包
+    compile 'com.lzy.net:okrx:0.1.2'        //RxJava扩展支持，根据需要添加
+    compile 'com.lzy.net:okserver:1.1.3'    //下载管理和上传管理扩展，根据需要添加
+
+//   自定义相册，完全仿微信UI，实现了拍照、图片选择------imagepicker
+    compile 'com.lzy.widget:imagepicker:0.5.5'
+//    二维码
+//    compile 'cn.yipianfengye.android:zxing-library:2.1'
+//    图片压缩
+    compile 'id.zelory:compressor:1.0.4'
+
+//   ratingbar星等级
+//    compile 'com.iarcuschin:simpleratingbar:0.1.5'
+
+//    三级联动
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+
+//   dialog
+    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
+    //wechat
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+//  刷新加载
+//    compile 'com.liaoinstan.springview:library:1.2.6'
+}

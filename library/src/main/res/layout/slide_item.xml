@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/si_ll"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/si_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:src="@mipmap/checkbox_normal"
+     />
+    <TextView
+        android:id="@+id/si_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:maxEms="2"
+        android:lines="2"
+        android:text="顶顶顶顶"
+        android:textColor="@color/color333333_lib"
+        android:textSize="11.5sp" />
+ <!--   <TextView
+        android:id="@+id/si_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:ems="2"
+        android:paddingTop="6dp"
+        android:maxEms="2"
+        android:lines="2"
+        android:text="顶顶顶顶"
+        android:textColor="@color/color333333_lib"
+        android:textSize="12.5sp" />-->
+</LinearLayout>
